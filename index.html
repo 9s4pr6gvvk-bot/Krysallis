@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krysallis | Counselling & Therapy in Harrogate</title>
+  <meta name="description" content="Professional counselling and therapy in Harrogate for adults, young people, couples and families. Face to face, online and telephone. Established 2007." />
+  <link rel="canonical" href="https://krysallis.org.uk/" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Krysallis","telephone":"01423 276327","email":"enquiries@krysallis.org.uk","url":"https://krysallis.org.uk","foundingDate":"2007","areaServed":["Harrogate","Yorkshire"]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #EDEAE4;
+      --bg-alt:      #E4E0D9;
+      --bg-light:    #F4F2EE;
+      --purple:      #3A3252;
+      --purple-mid:  #524870;
+      --purple-light:#EAE8F0;
+      --text:        #1A1A18;
+      --muted:       #66615C;
+      --subtle:      #9A948E;
+      --border:      #C6C0B8;
+      --border-lt:   #DAD5CE;
+      --white:       #FAF9F7;
+      --max:         1140px;
+      --hero-img:    url('https://images.unsplash.com/photo-1468581264429-2548ef9eb732?q=80&w=1170&auto=format&fit=crop');
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ═══ TOPBAR ═══ */
+    .topbar {
+      background: var(--purple);
+      color: rgba(255,255,255,0.6);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      padding: 8px 24px;
+    }
+    .topbar a { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .topbar a:hover { color: #fff; }
+    .topbar span { margin: 0 10px; opacity: 0.35; }
+
+    /* ═══ NAV ═══ */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(237,234,228,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.07); }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--purple) !important;
+      color: rgba(255,255,255,0.9) !important;
+      padding: 10px 22px !important;
+    }
+    .nav-cta:hover { background: var(--purple-mid) !important; color: #fff !important; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--text); }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--purple);
+      z-index: 200;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+    }
+    .mobile-menu a:hover { color: #fff; }
+    .mobile-close {
+      position: absolute;
+      top: 24px; right: 32px;
+      background: none; border: none;
+      color: rgba(255,255,255,0.6);
+      font-size: 28px;
+      cursor: pointer;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    /* ═══ HERO ═══ */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: var(--hero-img);
+      background-size: cover;
+      background-position: center 40%;
+      transform: scale(1.04);
+      animation: heroZoom 20s ease-out forwards;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.04); }
+      to   { transform: scale(1.00); }
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(22, 18, 36, 0.78) 0%,
+        rgba(58, 50, 82, 0.55) 50%,
+        rgba(22, 18, 36, 0.35) 100%
+      );
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 100px 40px 80px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 22px;
+      font-weight: 400;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 4.8vw, 5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: rgba(200,190,230,0.9);
+    }
+    .hero-lead {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.85;
+      max-width: 440px;
+      margin-bottom: 36px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .btn {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: 11.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 14px 30px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, color 0.2s, transform 0.15s, border-color 0.2s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-fill { background: var(--purple); color: rgba(255,255,255,0.92); }
+    .btn-fill:hover { background: var(--purple-mid); color: #fff; }
+    .btn-outline-white {
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+    .btn-outline-white:hover { border-color: rgba(255,255,255,0.75); color: #fff; }
+    .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+    .btn-ghost:hover { color: var(--text); border-color: var(--text); }
+    .hero-modes {
+      display: flex;
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 24px;
+    }
+    .hero-mode {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      font-weight: 400;
+      padding-right: 20px;
+      margin-right: 20px;
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+    .hero-mode:last-child { border-right: none; padding-right: 0; margin-right: 0; }
+
+    /* Hero form panel */
+    .hero-panel {
+      background: rgba(250,249,247,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 36px 32px;
+    }
+    .panel-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .panel-sub {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 26px;
+      letter-spacing: 0.02em;
+    }
+    .f-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 13px; }
+    .f-group label {
+      font-size: 10.5px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      font-weight: 400;
+    }
+    .f-group input,
+    .f-group select,
+    .f-group textarea {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 11px 14px;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: #fff;
+      outline: none;
+      width: 100%;
+      transition: border-color 0.2s, background 0.2s;
+      -webkit-appearance: none;
+    }
+    .f-group input::placeholder,
+    .f-group textarea::placeholder { color: rgba(255,255,255,0.22); }
+    .f-group input:focus,
+    .f-group select:focus { border-color: rgba(200,190,230,0.6); background: rgba(255,255,255,0.1); }
+    .f-group select option { background: #3A3252; color: #fff; }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .panel-btn {
+      width: 100%;
+      padding: 13px;
+      margin-top: 6px;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.9);
+      font-family: 'Jost', sans-serif;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .panel-btn:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.5); }
+    .panel-note { font-size: 11px; color: rgba(255,255,255,0.28); text-align: center; margin-top: 10px; }
+    .panel-success {
+      display: none;
+      text-align: center;
+      padding: 28px 16px;
+    }
+    .panel-success p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.85);
+      font-weight: 400;
+    }
+
+    /* ═══ INTRO ═══ */
+    .intro {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .intro-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+    }
+    .intro-left {
+      border-right: 1px solid var(--border);
+      padding: 72px 48px 72px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .intro-stat {
+      margin-bottom: 40px;
+    }
+    .intro-stat:last-child { margin-bottom: 0; }
+    .stat-fig {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .stat-rule {
+      width: 32px;
+      height: 1px;
+      background: var(--border);
+      margin: 10px 0;
+    }
+    .stat-desc {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--subtle);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .intro-right {
+      padding: 72px 40px 72px 64px;
+    }
+    .section-eyebrow {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--subtle);
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+    .display-heading {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      line-height: 1.18;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .display-heading em { font-style: italic; color: var(--purple-mid); }
+    .body-copy {
+      font-size: 15.5px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+    .body-copy + .body-copy { margin-top: 16px; }
+    .text-link {
+      display: inline-block;
+      font-size: 11.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 400;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .text-link:hover { color: var(--text); border-color: var(--text); }
+    .intro-actions { margin-top: 36px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+
+    /* ═══ SERVICES ═══ */
+    .services {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .services-inner { max-width: var(--max); margin: 0 auto; }
+    .services-header {
+      padding: 72px 40px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: end;
+      border-bottom: 1px solid var(--border);
+    }
+    .services-header .body-copy { max-width: 440px; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .service-item {
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 28px 32px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.25s;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-item:nth-child(4n) { border-right: none; }
+    .service-item:nth-last-child(-n+4) { border-bottom: none; }
+    .service-item::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--purple);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .service-item:hover { background: var(--white); }
+    .service-item:hover::before { transform: scaleX(1); }
+    .svc-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--border-lt);
+      line-height: 1;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .svc-name {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .svc-desc {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.75;
+      flex: 1;
+    }
+    .svc-link {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--purple-mid);
+      margin-top: 20px;
+      font-weight: 400;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .service-item:hover .svc-link { opacity: 1; }
+
+    /* ═══ TESTIMONIALS ═══ */
+    .testimonials {
+      background: var(--purple);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(0,0,0,0.25);
+    }
+    .testimonials-deco {
+      position: absolute;
+      top: -40px;
+      left: 32px;
+      font-family: 'Playfair Display', serif;
+      font-size: 28rem;
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(255,255,255,0.03);
+      pointer-events: none;
+      user-select: none;
+    }
+    .testimonials-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .testimonials-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 52px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 32px;
+    }
+    .testimonials-header .section-eyebrow { color: rgba(255,255,255,0.35); }
+    .testimonials-header .display-heading { color: #fff; }
+    .testimonials-header .display-heading em { color: rgba(200,190,230,0.85); }
+    .t-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+    .t-card {
+      background: var(--purple);
+      padding: 40px 36px;
+      transition: background 0.25s;
+    }
+    .t-card:hover { background: var(--purple-mid); }
+    .t-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 20px;
+    }
+    .t-stars span {
+      font-size: 13px;
+      color: rgba(200,180,120,0.9);
+    }
+    .t-body {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      font-weight: 400;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .t-rule {
+      width: 24px;
+      height: 1px;
+      background: rgba(255,255,255,0.2);
+      margin-bottom: 14px;
+    }
+    .t-name {
+      font-size: 11.5px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+    .t-service {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.3);
+      margin-top: 3px;
+    }
+    .t-footer { margin-top: 48px; }
+
+    /* ═══ ABOUT SPLIT ═══ */
+    .about {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .about-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .about-image {
+      position: relative;
+      min-height: 520px;
+      overflow: hidden;
+      border-right: 1px solid var(--border);
+    }
+    .about-image-bg {
+      position: absolute;
+      inset: 0;
+      background-image: var(--hero-img);
+      background-size: cover;
+      background-position: center 20%;
+      filter: brightness(0.75) saturate(0.8);
+    }
+    .about-image-caption {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      right: 32px;
+    }
+    .about-caption-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-style: italic;
+      font-weight: 400;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.3;
+    }
+    .about-text {
+      padding: 64px 56px 64px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .about-text .section-eyebrow { margin-bottom: 16px; }
+    .about-text .display-heading { font-size: clamp(1.9rem, 2.4vw, 2.5rem); margin-bottom: 24px; }
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 28px 0 36px;
+      border-top: 1px solid var(--border-lt);
+    }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border-lt);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .check-list li::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      min-width: 5px;
+      border-radius: 50%;
+      background: var(--purple-mid);
+      margin-top: 7px;
+    }
+
+    /* ═══ HOW IT WORKS ═══ */
+    .how {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+    }
+    .how-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+    .how-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-left: 1px solid var(--border);
+    }
+    .how-step {
+      border-right: 1px solid var(--border);
+      padding: 36px 28px;
+    }
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .step-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.98rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .step-body {
+      font-size: 13.5px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* ═══ FAQ ═══ */
+    .faq {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+    .faq-left {
+      border-right: 1px solid var(--border);
+      padding: 72px 48px 72px 40px;
+    }
+    .faq-left .display-heading { font-size: clamp(1.8rem, 2.2vw, 2.4rem); }
+    .faq-left .body-copy { margin-top: 20px; font-size: 14px; }
+    .faq-right {
+      padding: 72px 40px 72px 64px;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border-lt);
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border-lt); }
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      cursor: pointer;
+      gap: 20px;
+    }
+    .faq-q h4 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.97rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .faq-toggle {
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+      color: var(--muted);
+      font-weight: 300;
+      transition: background 0.2s, border-color 0.2s;
+      line-height: 1;
+    }
+    .faq-item.open .faq-toggle { background: var(--purple); border-color: var(--purple); color: #fff; }
+    .faq-a {
+      display: none;
+      padding-bottom: 20px;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ═══ CONTACT ═══ */
+    .contact {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .contact-left {
+      padding: 80px 56px 80px 40px;
+      border-right: 1px solid var(--border);
+    }
+    .contact-left .display-heading { font-size: clamp(2rem, 2.8vw, 3rem); margin-bottom: 20px; }
+    .contact-left .body-copy { margin-bottom: 40px; }
+    .contact-details {
+      border-top: 1px solid var(--border);
+    }
+    .cd-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-lt);
+      gap: 20px;
+    }
+    .cd-key {
+      font-size: 10.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--subtle);
+      font-weight: 400;
+      white-space: nowrap;
+    }
+    .cd-val {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text);
+      text-align: right;
+    }
+    .cd-val a { color: var(--text); text-decoration: none; }
+    .cd-val a:hover { color: var(--purple-mid); }
+
+    .contact-right {
+      background: var(--purple);
+      padding: 80px 40px 80px 56px;
+    }
+    .cf-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .cf-sub {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 32px;
+      letter-spacing: 0.02em;
+    }
+    .cf { display: flex; flex-direction: column; gap: 14px; }
+    .c-field { display: flex; flex-direction: column; gap: 5px; }
+    .c-field label {
+      font-size: 10.5px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      font-weight: 400;
+    }
+    .c-field input,
+    .c-field select,
+    .c-field textarea {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 12px 14px;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: #fff;
+      outline: none;
+      width: 100%;
+      -webkit-appearance: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .c-field input::placeholder,
+    .c-field textarea::placeholder { color: rgba(255,255,255,0.2); }
+    .c-field input:focus,
+    .c-field select:focus,
+    .c-field textarea:focus {
+      border-color: rgba(200,190,230,0.5);
+      background: rgba(255,255,255,0.1);
+    }
+    .c-field select option { background: var(--purple); color: #fff; }
+    .c-field textarea { resize: vertical; min-height: 90px; }
+    .c-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .cf-submit {
+      width: 100%;
+      padding: 14px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.28);
+      color: rgba(255,255,255,0.9);
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      margin-top: 4px;
+    }
+    .cf-submit:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.5); }
+    .cf-privacy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.25);
+      text-align: center;
+      line-height: 1.7;
+    }
+    .cf-privacy a { color: rgba(255,255,255,0.35); }
+    .cf-success {
+      display: none;
+      padding: 32px 20px;
+      text-align: center;
+    }
+    .cf-success p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ═══ ARTICLES ═══ */
+    .articles {
+      background: var(--bg-light);
+      border-bottom: 1px solid var(--border);
+    }
+    .articles-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .articles-header {
+      padding: 72px 40px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--border);
+    }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .article-item {
+      border-right: 1px solid var(--border);
+      padding: 40px 36px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+    .article-item:last-child { border-right: none; }
+    .article-item:hover { background: var(--white); }
+    .art-tag {
+      font-size: 10.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--subtle);
+      font-weight: 400;
+      margin-bottom: 14px;
+    }
+    .art-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+    .art-excerpt {
+      font-size: 13.5px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.8;
+      flex: 1;
+    }
+    .art-read {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--purple-mid);
+      margin-top: 22px;
+      font-weight: 400;
+      transition: letter-spacing 0.2s;
+    }
+    .article-item:hover .art-read { letter-spacing: 0.2em; }
+
+    /* ═══ FOOTER ═══ */
+    footer {
+      background: var(--purple);
+      padding: 64px 40px 32px;
+    }
+    .footer-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 14px;
+    }
+    .footer-about {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+    .footer-contact-line {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.9;
+    }
+    .footer-contact-line a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+      display: block;
+    }
+    .footer-contact-line a:hover { color: rgba(255,255,255,0.85); }
+    .footer-col-title {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: rgba(255,255,255,0.85); }
+    .footer-bottom {
+      max-width: var(--max);
+      margin: 28px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.25);
+    }
+    .footer-bottom a { color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-bottom a:hover { color: rgba(255,255,255,0.65); }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 1020px) {
+      .hero-inner { grid-template-columns: 1fr; max-width: 680px; }
+      .hero-panel { max-width: 540px; }
+      .intro-inner { grid-template-columns: 1fr; }
+      .intro-left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 40px; flex-direction: row; flex-wrap: wrap; gap: 40px; }
+      .intro-right { padding: 48px 40px; }
+      .services-header { grid-template-columns: 1fr; gap: 16px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-item:nth-child(4n) { border-right: 1px solid var(--border); }
+      .service-item:nth-child(2n) { border-right: none; }
+      .service-item:nth-last-child(-n+4) { border-bottom: 1px solid var(--border); }
+      .service-item:nth-last-child(-n+2) { border-bottom: none; }
+      .about-inner { grid-template-columns: 1fr; }
+      .about-image { min-height: 360px; border-right: none; border-bottom: 1px solid var(--border); }
+      .about-text { padding: 48px 40px; }
+      .how-header { grid-template-columns: 1fr; gap: 16px; }
+      .how-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-inner { grid-template-columns: 1fr; }
+      .faq-left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 40px; }
+      .faq-right { padding: 48px 40px; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .contact-left { border-right: none; border-bottom: 1px solid var(--border); padding: 56px 40px; }
+      .contact-right { padding: 56px 40px; }
+      .t-grid { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .article-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .article-item:last-child { border-bottom: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    @media (max-width: 640px) {
+      .hero-inner { padding: 72px 20px 56px; }
+      .hero h1 { font-size: 2.6rem; }
+      .hero-panel { padding: 28px 20px; }
+      .f-row { grid-template-columns: 1fr; }
+      .intro-left { padding: 40px 20px; }
+      .intro-right { padding: 40px 20px; }
+      .services-header { padding: 48px 20px 32px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-item { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+      .service-item:last-child { border-bottom: none !important; }
+      .about-text { padding: 40px 20px; }
+      .how-inner { padding: 56px 20px; }
+      .how-grid { grid-template-columns: 1fr; }
+      .faq-left { padding: 40px 20px; }
+      .faq-right { padding: 40px 20px; }
+      .contact-left { padding: 48px 20px; }
+      .contact-right { padding: 48px 20px; }
+      .c-row { grid-template-columns: 1fr; }
+      .articles-header { padding: 48px 20px 28px; flex-direction: column; align-items: flex-start; gap: 14px; }
+      .article-item { padding: 32px 20px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      footer { padding: 48px 20px 24px; }
+      .nav-inner { padding: 0 20px; }
+      .testimonials-inner { padding: 56px 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, .hero-bg { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <a href="tel:01423276327">01423 276327</a><span>|</span><a href="mailto:enquiries@krysallis.org.uk">enquiries@krysallis.org.uk</a><span>|</span>Daytime, evenings &amp; Saturdays
+  </div>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Krysallis</a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how">Getting started</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#contact" class="nav-cta">Enquire</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="navigation">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">&#215;</button>
+    <a href="#services" data-close>Services</a>
+    <a href="#how" data-close>Getting started</a>
+    <a href="#testimonials" data-close>Reviews</a>
+    <a href="#articles" data-close>Articles</a>
+    <a href="#contact" data-close>Enquire</a>
+    <a href="tel:01423276327" style="font-family:'Jost',sans-serif;font-size:1rem;font-weight:300;letter-spacing:0.08em;color:rgba(255,255,255,0.35);" data-close>01423 276327</a>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg" role="img" aria-label="A quiet woodland path in soft daylight"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="hero-eyebrow">Counselling &amp; therapy · Harrogate · Est. 2007</span>
+        <h1>A space to be<br /><em>heard,<br />and helped.</em></h1>
+        <p class="hero-lead">Professional counselling and therapy for adults, young people, couples and families — matched carefully to the right therapist for you.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-fill">Get in touch</a>
+          <a href="tel:01423276327" class="btn btn-outline-white">01423 276327</a>
+        </div>
+        <div class="hero-modes">
+          <span class="hero-mode">Face to face</span>
+          <span class="hero-mode">Online</span>
+          <span class="hero-mode">Telephone</span>
+          <span class="hero-mode">Walk &amp; Talk</span>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-title">Free consultation</div>
+        <div class="panel-sub">We'll call you back within one working day.</div>
+        <form id="heroForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="f-row">
+            <div class="f-group">
+              <label for="h-name">Name</label>
+              <input type="text" id="h-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="f-group">
+              <label for="h-phone">Phone</label>
+              <input type="tel" id="h-phone" name="phone" placeholder="07700…" required />
+            </div>
+          </div>
+          <div class="f-group">
+            <label for="h-email">Email</label>
+            <input type="email" id="h-email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="f-group">
+            <label for="h-svc">Looking for help with…</label>
+            <select id="h-svc" name="service">
+              <option value="" disabled selected>Select</option>
+              <option>Individual counselling</option>
+              <option>Couples therapy</option>
+              <option>Family therapy</option>
+              <option>Children &amp; young people</option>
+              <option>CBT</option>
+              <option>Life coaching</option>
+              <option>Hypnotherapy</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" />
+          <button type="submit" class="panel-btn">Request a free consultation</button>
+          <p class="panel-note">No commitment. Completely confidential.</p>
+        </form>
+        <div class="panel-success" id="heroSuccess">
+          <p>Thank you — we'll be in touch shortly.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-inner">
+      <div class="intro-left">
+        <div class="intro-stat">
+          <div class="stat-fig">18</div>
+          <div class="stat-rule"></div>
+          <div class="stat-desc">Years helping people in Harrogate</div>
+        </div>
+        <div class="intro-stat">
+          <div class="stat-fig">8</div>
+          <div class="stat-rule"></div>
+          <div class="stat-desc">Therapies &amp; approaches offered</div>
+        </div>
+        <div class="intro-stat">
+          <div class="stat-fig">6</div>
+          <div class="stat-rule"></div>
+          <div class="stat-desc">Days a week, including evenings</div>
+        </div>
+      </div>
+      <div class="intro-right">
+        <span class="section-eyebrow">About Krysallis</span>
+        <h2 class="display-heading" style="font-size:clamp(1.9rem,2.6vw,2.8rem);margin-bottom:24px;">A professional space to talk through what's <em>difficult.</em></h2>
+        <p class="body-copy">We provide affordable counselling and coaching for individuals, couples, families and children. Since 2007 we've helped thousands of people in Harrogate find a clearer way forward — working with a therapist matched carefully to their situation.</p>
+        <p class="body-copy">Sessions are available face to face at our Harrogate practice, online, or by telephone. We offer daytime, evening and Saturday appointments.</p>
+        <div class="intro-actions">
+          <a href="#contact" class="btn btn-fill">Get in touch</a>
+          <a href="#services" class="text-link">View all services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services-inner">
+      <div class="services-header">
+        <div>
+          <span class="section-eyebrow">What we offer</span>
+          <h2 class="display-heading" style="font-size:clamp(1.9rem,2.5vw,2.7rem);">Therapy and support <em>tailored to you.</em></h2>
+        </div>
+        <p class="body-copy" style="max-width:440px;">Whether you're looking for individual counselling, help with your relationship, or specialist support for your child — we have a therapist who can help.</p>
+      </div>
+      <div class="services-grid">
+        <a href="#contact" class="service-item">
+          <div class="svc-num">01</div>
+          <div class="svc-name">Adults</div>
+          <div class="svc-desc">One-to-one counselling for anxiety, depression, stress, bereavement, trauma and life transitions.</div>
+          <div class="svc-link">Enquire &rarr;</div>
+        </a>
+        <a href="#contact" class="service-item">
+          <div class="svc-num">02</div>
+          <div class="svc-name">Couples</div>
+          <div class="svc-desc">Relationship counselling to improve communication, rebuild trust and navigate difficulties together.</div>
+          <div class="svc-link">Enquire &rarr;</div>
+        </a>
+        <a href="#contact" class="service-item">
+          <div class="svc-num">03</div>
+          <div class="svc-name">Families</div>
+          <div class="svc-desc">Family therapy to work through conflict, major life changes and improve understanding between family members.</div>
+          <div class="svc-link">Enquire &rarr;</div>
+        </a>
+        <a href="#contact" class="service-item">
+          <div class="svc-num">04</div>
+          <div class="svc-name">Children &amp; Young People</div>
+          <div class="svc-desc">Specialist support for children and teenagers facing anxiety, self-esteem, school pressure and emotional difficulties.</div>
+          <div class="svc-link">Enquire &rarr;</div>
+        </a>
+        <a href="#contact" class="service-item">
+          <div class="svc-num">05</div>
+          <div class="svc-name">Cognitive Behavioural Therapy</div>
+          <div class="svc-desc">A structured approach to identify unhelpful thought patterns and develop practical coping strategies.</div>
+          <div class="svc-link">Enquire &rarr;</div>
+        </a>
+        <a href="#contact" class="service-item">
+          <div class="svc-num">06</div>
+          <div class="svc-name">Life Coaching</div>
+          <div class="svc-desc">Goal-focused coaching to gain clarity, build confidence and move forward in life or work.</div>
+          <div class="svc-link">Enquire &rarr;</div>
+        </a>
+        <a href="#contact" class="service-item">
+          <div class="svc-num">07</div>
+          <div class="svc-name">Hypnotherapy</div>
+          <div class="svc-desc">Therapeutic hypnosis to address anxiety, phobias, habits and unlock positive change at a deeper level.</div>
+          <div class="svc-link">Enquire &rarr;</div>
+        </a>
+        <a href="#contact" class="service-item">
+          <div class="svc-num">08</div>
+          <div class="svc-name">Walk &amp; Talk</div>
+          <div class="svc-desc">Therapy sessions outdoors — for those who find talking while walking more natural and liberating.</div>
+          <div class="svc-link">Enquire &rarr;</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-deco" aria-hidden="true">&ldquo;</div>
+    <div class="testimonials-inner">
+      <div class="testimonials-header">
+        <div>
+          <span class="section-eyebrow">Client reviews</span>
+          <h2 class="display-heading" style="font-size:clamp(1.8rem,2.4vw,2.6rem);color:#fff;">Why people choose <em>Krysallis.</em></h2>
+        </div>
+        <a href="#contact" class="btn btn-outline-white" style="white-space:nowrap;">Read all reviews</a>
+      </div>
+      <div class="t-grid">
+        <div class="t-card">
+          <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <div class="t-body">"Zoe was approachable, engaging and I felt she understood my needs very quickly. We got to the root of what I needed to work through and I felt I could be completely honest."</div>
+          <div class="t-rule"></div>
+          <div class="t-name">Anonymous</div>
+          <div class="t-service">Individual counselling — Zoe</div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <div class="t-body">"Zoe allowed me to feel listened to and understood. She was sympathetic, sensitive and incredibly intuitive — yet never pandered to me. Exactly what I needed."</div>
+          <div class="t-rule"></div>
+          <div class="t-name">Client</div>
+          <div class="t-service">Individual counselling — Zoe</div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <div class="t-body">"Tammy was kind and patient, and very early on helped me to better understand my own behaviours. I felt much more equipped to manage difficult situations."</div>
+          <div class="t-rule"></div>
+          <div class="t-name">Client</div>
+          <div class="t-service">Individual counselling — Tammy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SPLIT -->
+  <section class="about">
+    <div class="about-inner">
+      <div class="about-image">
+        <div class="about-image-bg"></div>
+        <div class="about-image-caption">
+          <div class="about-caption-text">"The right therapist<br />changes everything."</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-eyebrow">Our approach</span>
+        <h2 class="display-heading">Matched carefully to the <em>right therapist for you.</em></h2>
+        <p class="body-copy">Choosing therapy can feel daunting. We take time to understand your situation and make sure you're paired with a therapist whose approach, experience and personality are the right fit.</p>
+        <ul class="check-list">
+          <li>A free brief phone consultation before your first session</li>
+          <li>Careful matching to a therapist suited to your needs</li>
+          <li>Daytime, evening and Saturday appointments</li>
+          <li>Face to face, online and telephone sessions available</li>
+          <li>No fixed number of sessions — you decide how long is right</li>
+        </ul>
+        <a href="#contact" class="btn btn-fill">Book a consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="how-inner">
+      <div class="how-header">
+        <div>
+          <span class="section-eyebrow">Getting started</span>
+          <h2 class="display-heading" style="font-size:clamp(1.9rem,2.4vw,2.7rem);">What happens when <em>you contact us.</em></h2>
+        </div>
+        <p class="body-copy" style="max-width:420px;">We've made starting therapy as straightforward as possible. There's no pressure, no commitment after the first call, and no waiting around.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="step-num">01</div>
+          <div class="step-title">Get in touch</div>
+          <div class="step-body">Call, email or fill in the form. We respond within one working day. A free brief phone consultation is available before you commit to anything.</div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">02</div>
+          <div class="step-title">We match you</div>
+          <div class="step-body">We take time to understand what you need and match you with the right therapist. The therapeutic relationship is at the heart of everything we do.</div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">03</div>
+          <div class="step-title">First session</div>
+          <div class="step-body">An assessment session to get to know each other and agree a way forward. Sessions are 50 minutes; group family sessions up to 75 minutes.</div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">04</div>
+          <div class="step-title">Ongoing support</div>
+          <div class="step-body">Weekly sessions, reviewed together at six weeks. No fixed end date — therapy continues for as long as you and your therapist agree it is helpful.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="faq-inner">
+      <div class="faq-left">
+        <span class="section-eyebrow">Questions</span>
+        <h2 class="display-heading" style="font-size:clamp(1.8rem,2.2vw,2.5rem);">Things people often <em>ask.</em></h2>
+        <p class="body-copy">If you don't find what you're looking for here, please call or use the contact form — we're happy to answer any question, no matter how small.</p>
+        <a href="#contact" class="text-link" style="margin-top:28px;display:inline-block;">Send a question &rarr;</a>
+      </div>
+      <div class="faq-right">
+        <div class="faq-item open">
+          <div class="faq-q">
+            <h4>How much does therapy cost?</h4>
+            <div class="faq-toggle">&#8722;</div>
+          </div>
+          <div class="faq-a">Fees vary by therapy type and therapist. We aim to keep sessions affordable and accessible. Get in touch and we'll give you clear, straightforward pricing with no surprises.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <h4>How many sessions will I need?</h4>
+            <div class="faq-toggle">&#43;</div>
+          </div>
+          <div class="faq-a">There is no set number. Some clients find short-term help of 6–8 sessions sufficient; others come for much longer. We review progress together at six weeks and follow your lead throughout.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <h4>Do you offer online or telephone sessions?</h4>
+            <div class="faq-toggle">&#43;</div>
+          </div>
+          <div class="faq-a">Yes. We offer sessions by video call and telephone as well as face to face in Harrogate. Many clients prefer the convenience of online therapy and find it works just as well.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <h4>Is everything I say kept confidential?</h4>
+            <div class="faq-toggle">&#43;</div>
+          </div>
+          <div class="faq-a">Yes. Everything discussed is confidential. The only exceptions are situations where there is serious risk of harm to yourself or others. Your therapist will explain this fully in your first session.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <h4>What is the difference between counselling, CBT and coaching?</h4>
+            <div class="faq-toggle">&#43;</div>
+          </div>
+          <div class="faq-a">Counselling provides a space to explore feelings and experiences at your own pace. CBT is a structured approach focused on changing unhelpful thinking patterns. Life coaching is goal-oriented and focused on moving forward. We'll help you work out which approach best suits your situation.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <span class="section-eyebrow">Get in touch</span>
+        <h2 class="display-heading">Ready to take <em>the first step?</em></h2>
+        <p class="body-copy">Getting in touch is often the hardest part. Whether you know exactly what you need or aren't yet sure — we'll help you figure it out. There is no pressure and no commitment required.</p>
+        <div class="contact-details">
+          <div class="cd-row">
+            <span class="cd-key">Phone</span>
+            <span class="cd-val"><a href="tel:01423276327">01423 276327</a></span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-key">Email</span>
+            <span class="cd-val"><a href="mailto:enquiries@krysallis.org.uk">enquiries@krysallis.org.uk</a></span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-key">Location</span>
+            <span class="cd-val">Harrogate, North Yorkshire</span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-key">Availability</span>
+            <span class="cd-val">Daytime, evenings &amp; Saturdays</span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-key">Established</span>
+            <span class="cd-val">2007</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="cf-heading">Send a message</div>
+        <div class="cf-sub">We'll respond within one working day.</div>
+        <div class="cf-success" id="contactSuccess">
+          <p>Thank you — we'll be in touch shortly.</p>
+        </div>
+        <form class="cf" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="c-row">
+            <div class="c-field">
+              <label for="c-fn">First name</label>
+              <input type="text" id="c-fn" name="first_name" placeholder="Jane" required />
+            </div>
+            <div class="c-field">
+              <label for="c-ln">Last name</label>
+              <input type="text" id="c-ln" name="last_name" placeholder="Smith" />
+            </div>
+          </div>
+          <div class="c-field">
+            <label for="c-em">Email address</label>
+            <input type="email" id="c-em" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="c-field">
+            <label for="c-ph">Phone number</label>
+            <input type="tel" id="c-ph" name="phone" placeholder="07700 000000" />
+          </div>
+          <div class="c-field">
+            <label for="c-svc">I'm looking for…</label>
+            <select id="c-svc" name="service">
+              <option value="" disabled selected>Select</option>
+              <option>Individual counselling</option>
+              <option>Couples therapy</option>
+              <option>Family therapy</option>
+              <option>Children &amp; young people</option>
+              <option>CBT</option>
+              <option>Life coaching</option>
+              <option>Hypnotherapy</option>
+              <option>Walk &amp; Talk</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="c-field">
+            <label for="c-msg">Message (optional)</label>
+            <textarea id="c-msg" name="message" placeholder="Tell us a little about what you're looking for…"></textarea>
+          </div>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <button type="submit" class="cf-submit">Send message</button>
+          <p class="cf-privacy">Your details are kept strictly confidential and will not be shared. <a href="#">Privacy policy.</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <section class="articles" id="articles">
+    <div class="articles-inner">
+      <div class="articles-header">
+        <div>
+          <span class="section-eyebrow">News &amp; articles</span>
+          <h2 class="display-heading" style="font-size:clamp(1.7rem,2.2vw,2.4rem);">Stories to inspire <em>and help you.</em></h2>
+        </div>
+        <a href="#" class="text-link">View all articles</a>
+      </div>
+      <div class="articles-grid">
+        <a href="#" class="article-item">
+          <div class="art-tag">Anxiety</div>
+          <div class="art-title">When Anxiety Starts to Affect Your Daily Life</div>
+          <div class="art-excerpt">Feeling anxious from time to time is a normal part of life. But when it begins to interfere with how you function day to day, it may be time to seek support.</div>
+          <div class="art-read">Read more &rarr;</div>
+        </a>
+        <a href="#" class="article-item">
+          <div class="art-tag">Family</div>
+          <div class="art-title">Reconnecting with Your Adult Son or Daughter</div>
+          <div class="art-excerpt">When your relationship with an adult child has broken down, it can leave an ache that words can't easily describe. Here are some steps to consider.</div>
+          <div class="art-read">Read more &rarr;</div>
+        </a>
+        <a href="#" class="article-item">
+          <div class="art-tag">Relationships</div>
+          <div class="art-title">Supporting a Loved One with Alcohol Dependency</div>
+          <div class="art-excerpt">If you've found yourself carrying the weight of someone else's alcohol dependency, know this: you are not alone, and there is help available.</div>
+          <div class="art-read">Read more &rarr;</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Krysallis</div>
+        <div class="footer-about">Professional counselling and therapy in Harrogate since 2007. Affordable, accessible support for individuals, couples, families and young people.</div>
+        <div class="footer-contact-line">
+          <a href="tel:01423276327">01423 276327</a>
+          <a href="mailto:enquiries@krysallis.org.uk">enquiries@krysallis.org.uk</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <ul>
+          <li><a href="#">Individual counselling</a></li>
+          <li><a href="#">Couples therapy</a></li>
+          <li><a href="#">Family therapy</a></li>
+          <li><a href="#">Children &amp; young people</a></li>
+          <li><a href="#">CBT</a></li>
+          <li><a href="#">Life coaching</a></li>
+          <li><a href="#">Hypnotherapy</a></li>
+          <li><a href="#">Walk &amp; Talk</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">About</div>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Meet the team</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">News &amp; articles</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Useful reading</div>
+        <ul>
+          <li><a href="#">Harrogate and counselling</a></li>
+          <li><a href="#">How counselling can help</a></li>
+          <li><a href="#">What is hypnotherapy?</a></li>
+          <li><a href="#">Types of family counselling</a></li>
+          <li><a href="#">Young people's counselling</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Krysallis. Registered in England &amp; Wales — Company No. 8782572.</span>
+      <span><a href="#">Privacy Policy</a>&ensp;&middot;&ensp;<a href="#">Terms &amp; Conditions</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll shadow
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 12);
+    }, { passive: true });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const closeMobile = () => { mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); };
+    hamburger.addEventListener('click', () => { mobileMenu.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); });
+    mobileClose.addEventListener('click', closeMobile);
+    mobileMenu.querySelectorAll('[data-close]').forEach(a => a.addEventListener('click', closeMobile));
+
+    // FAQ
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.closest('.faq-item');
+        const toggle = q.querySelector('.faq-toggle');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-toggle').innerHTML = '&#43;';
+        });
+        if (!wasOpen) {
+          item.classList.add('open');
+          toggle.innerHTML = '&#8722;';
+        }
+      });
+    });
+
+    // Async form submit helper
+    async function submitForm(form, successEl) {
+      const btn = form.querySelector('button[type=submit], button.panel-btn');
+      const orig = btn.textContent;
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          successEl.style.display = 'block';
+        } else {
+          btn.textContent = 'Something went wrong — please call us';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Something went wrong — please call us';
+        btn.disabled = false;
+      }
+    }
+
+    document.getElementById('heroForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitForm(this, document.getElementById('heroSuccess'));
+    });
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitForm(this, document.getElementById('contactSuccess'));
+    });
+  </script>
+</body>
+</html>
