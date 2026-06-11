@@ -685,6 +685,114 @@
       margin-top: 7px;
     }
 
+    /* ═══ MEET THE TEAM ═══ */
+    .team {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .team-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .team-header {
+      padding: 72px 40px 56px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: end;
+      border-bottom: 1px solid var(--border);
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .team-card {
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 36px 44px;
+      text-align: center;
+      transition: background 0.25s;
+    }
+    .team-card:last-child { border-right: none; }
+    .team-card:hover { background: var(--bg-light); }
+    .team-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--bg-alt);
+      margin-bottom: 28px;
+      border: 3px solid var(--border-lt);
+      flex-shrink: 0;
+      transition: border-color 0.3s;
+    }
+    .team-card:hover .team-photo { border-color: var(--purple-mid); }
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.5s ease;
+      filter: saturate(0.88);
+    }
+    .team-card:hover .team-photo img { transform: scale(1.06); }
+    .team-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .team-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 5px;
+      line-height: 1.2;
+    }
+    .team-role {
+      font-size: 10.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--purple-mid);
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+    .team-bio {
+      font-size: 13.5px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.85;
+      flex: 1;
+    }
+    .team-quals {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 20px;
+      margin-bottom: 24px;
+    }
+    .team-qual {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--subtle);
+      font-weight: 400;
+      border: 1px solid var(--border-lt);
+      padding: 4px 10px;
+      background: var(--bg);
+    }
+    .team-footer {
+      padding: 32px 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+    }
+
     /* ═══ REFERRAL STRIP ═══ */
     .referral {
       background: var(--purple-light);
@@ -1201,6 +1309,14 @@
       .about-text { padding: 48px 40px; }
       .how-header { grid-template-columns: 1fr; gap: 16px; }
       .how-grid { grid-template-columns: repeat(3, 1fr); }
+      .team-header { grid-template-columns: 1fr; gap: 16px; padding: 48px 40px 40px; }
+      .team-grid { grid-template-columns: 1fr; }
+      .team-card { border-right: none; border-bottom: 1px solid var(--border); flex-direction: row; align-items: flex-start; text-align: left; padding: 36px 40px; gap: 32px; }
+      .team-card:last-child { border-bottom: none; }
+      .team-photo { width: 120px; height: 120px; flex-shrink: 0; margin-bottom: 0; }
+      .team-info { align-items: flex-start; }
+      .team-quals { justify-content: flex-start; }
+      .team-footer { padding: 28px 40px; }
       .faq-inner { grid-template-columns: 1fr; }
       .faq-left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 40px; }
       .faq-right { padding: 48px 40px; }
@@ -1230,6 +1346,12 @@
       .about-text { padding: 40px 20px; }
       .how-inner { padding: 56px 20px; }
       .how-grid { grid-template-columns: 1fr; }
+      .team-header { padding: 44px 20px 32px; }
+      .team-card { flex-direction: column; align-items: center; text-align: center; padding: 36px 20px; gap: 0; }
+      .team-photo { width: 130px; height: 130px; margin-bottom: 24px; }
+      .team-info { align-items: center; }
+      .team-quals { justify-content: center; }
+      .team-footer { padding: 24px 20px; }
       .faq-left { padding: 40px 20px; }
       .faq-right { padding: 40px 20px; }
       .contact-left { padding: 48px 20px; }
@@ -1261,6 +1383,7 @@
       <a href="/" class="nav-logo">Krysallis</a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
+        <li><a href="#team">Meet the team</a></li>
         <li><a href="#how">Getting started</a></li>
         <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#articles">Articles</a></li>
@@ -1275,6 +1398,7 @@
   <div class="mobile-menu" id="mobileMenu" role="navigation">
     <button class="mobile-close" id="mobileClose" aria-label="Close menu">&#215;</button>
     <a href="#services" data-close>Services</a>
+    <a href="#team" data-close>Meet the team</a>
     <a href="#how" data-close>Getting started</a>
     <a href="#testimonials" data-close>Reviews</a>
     <a href="#articles" data-close>Articles</a>
@@ -1375,6 +1499,72 @@
           <a href="#contact" class="btn btn-fill">Get in touch</a>
           <a href="#services" class="text-link">View all services</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET THE TEAM -->
+  <section class="team" id="team">
+    <div class="team-inner">
+      <div class="team-header">
+        <div>
+          <span class="section-eyebrow">Meet the team</span>
+          <h2 class="display-heading" style="font-size:clamp(1.9rem,2.5vw,2.7rem);">Experienced therapists, <em>here for you.</em></h2>
+        </div>
+        <p class="body-copy" style="max-width:440px;">Every member of our team is professionally qualified, HCPC registered or BACP accredited, and carefully matched to you. Between us we cover a broad range of specialisms, approaches and client groups.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://www.krysallis.org.uk/wp-content/uploads/2026/06/Black-White-Design-Update-1-768x944.jpeg" alt="Jo Cheetham — Psychologist and EMDR Therapist" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <div class="team-name">Jo Cheetham</div>
+            <div class="team-role">Psychologist &amp; EMDR Therapist</div>
+            <div class="team-bio">Jo is a HCPC-registered Forensic Psychologist with over 14 years' experience. She supports clients with trauma, anxiety, depression and emotional regulation, drawing on EMDR, CBT, DBT and Compassion Focused Therapy. Jo offers a warm, collaborative approach, helping people process difficult experiences and move towards feeling safer and more connected.</div>
+            <div class="team-quals">
+              <span class="team-qual">HCPC Registered</span>
+              <span class="team-qual">EMDR</span>
+              <span class="team-qual">CBT &amp; DBT</span>
+              <span class="team-qual">Adults &amp; Young People (16+)</span>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://www.krysallis.org.uk/wp-content/uploads/2026/06/Krysallis-Website-photos.svg" alt="Rebecca Bussy — Psychotherapist and Counsellor" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <div class="team-name">Rebecca Bussy</div>
+            <div class="team-role">Psychotherapist &amp; Counsellor</div>
+            <div class="team-bio">Rebecca is an integrative, person-centred therapist with a background as an Advanced Nurse Specialist in the NHS. She specialises in midlife transitions, bereavement, anxiety, menopause and identity — providing a warm, safe space where clients feel truly heard. She is a registered member of the BACP.</div>
+            <div class="team-quals">
+              <span class="team-qual">BACP Registered</span>
+              <span class="team-qual">Person-Centred</span>
+              <span class="team-qual">Integrative</span>
+              <span class="team-qual">Adults</span>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://www.krysallis.org.uk/wp-content/uploads/2025/10/IMG_9966-rotated.jpg" alt="Jane Troughton — Creative Arts Therapist" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <div class="team-name">Jane Troughton</div>
+            <div class="team-role">Creative Arts Therapist</div>
+            <div class="team-bio">Jane is an HCPC-registered creative arts therapist working with adults, young people and children, including adopted children with CPTSD. She is trained in Dyadic Developmental Psychotherapy (DDP) and is an Advanced Music and Imagery Practitioner — offering a uniquely creative and trauma-informed approach to therapy.</div>
+            <div class="team-quals">
+              <span class="team-qual">HCPC Registered</span>
+              <span class="team-qual">DDP Trained</span>
+              <span class="team-qual">Music &amp; Imagery</span>
+              <span class="team-qual">Children &amp; Adults</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="team-footer">
+        <a href="#" class="btn btn-ghost">View the full team</a>
       </div>
     </div>
   </section>
