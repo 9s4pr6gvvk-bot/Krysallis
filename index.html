@@ -685,123 +685,106 @@
       margin-top: 7px;
     }
 
-    /* ═══ MEET THE TEAM ═══ */
-    .team {
-      background: var(--white);
+    /* ═══ REFERRAL STRIP ═══ */
+    .referral {
+      background: var(--purple-light);
+      border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
-    .team-inner {
+    .referral-inner {
       max-width: var(--max);
       margin: 0 auto;
-    }
-    .team-header {
-      padding: 72px 40px 56px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: end;
-      border-bottom: 1px solid var(--border);
+      grid-template-columns: 360px 1fr;
     }
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .team-card {
+    .referral-left {
+      padding: 64px 48px 64px 40px;
       border-right: 1px solid var(--border);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 48px 36px 44px;
-      text-align: center;
-      transition: background 0.25s;
+      justify-content: center;
     }
-    .team-card:last-child { border-right: none; }
-    .team-card:hover { background: var(--bg-light); }
-    .team-photo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      overflow: hidden;
-      background: var(--bg-alt);
-      margin-bottom: 28px;
-      border: 3px solid var(--border-lt);
-      flex-shrink: 0;
-      transition: border-color 0.3s;
+    .referral-left .section-eyebrow { margin-bottom: 16px; }
+    .referral-left .display-heading { font-size: clamp(1.7rem, 2.2vw, 2.3rem); margin-bottom: 18px; }
+    .referral-left .display-heading em { color: var(--purple-mid); }
+    .referral-left .body-copy { font-size: 14.5px; }
+    .referral-right {
+      padding: 64px 40px 64px 64px;
     }
-    .team-card:hover .team-photo { border-color: var(--purple-mid); }
-    .team-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      transition: transform 0.5s ease;
-      filter: saturate(0.88);
+    .referral-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
     }
-    .team-card:hover .team-photo img { transform: scale(1.06); }
-    .team-info {
-      flex: 1;
+    .referral-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border-lt);
+    }
+    .referral-step:first-child { border-top: 1px solid var(--border-lt); }
+    .referral-step-marker {
       display: flex;
       flex-direction: column;
       align-items: center;
+      flex-shrink: 0;
+      padding-top: 2px;
     }
-    .team-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
+    .referral-step-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--purple);
+      flex-shrink: 0;
+    }
+    .referral-step-line {
+      width: 1px;
+      flex: 1;
+      background: var(--border);
+      margin-top: 5px;
+      min-height: 24px;
+    }
+    .referral-step:last-child .referral-step-line { display: none; }
+    .referral-step-content {
+      flex: 1;
+      padding-bottom: 4px;
+    }
+    .referral-step-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.95rem;
       font-weight: 400;
       color: var(--text);
-      margin-bottom: 5px;
-      line-height: 1.2;
+      margin-bottom: 4px;
+      line-height: 1.3;
     }
-    .team-role {
-      font-size: 10.5px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--purple-mid);
-      font-weight: 400;
-      margin-bottom: 18px;
-    }
-    .team-bio {
-      font-size: 13.5px;
+    .referral-step-note {
+      font-size: 13px;
       font-weight: 300;
       color: var(--muted);
-      line-height: 1.85;
-      flex: 1;
+      line-height: 1.7;
     }
-    .team-quals {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 6px;
-      margin-top: 20px;
-      margin-bottom: 24px;
-    }
-    .team-qual {
-      font-size: 10px;
-      letter-spacing: 0.1em;
+    .referral-step-tag {
+      font-size: 9.5px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--subtle);
-      font-weight: 400;
-      border: 1px solid var(--border-lt);
-      padding: 4px 10px;
-      background: var(--bg);
+      color: var(--purple-mid);
+      font-weight: 500;
+      background: rgba(82,72,112,0.1);
+      padding: 2px 7px;
+      display: inline-block;
+      margin-top: 5px;
     }
-    .team-footer {
-      padding: 32px 40px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: center;
-    }
+    .referral-cta { margin-top: 32px; }
+
     @media (max-width: 1020px) {
-      .team-header { grid-template-columns: 1fr; gap: 16px; padding: 48px 40px 40px; }
-      .team-grid { grid-template-columns: 1fr; }
-      .team-card { border-right: none; border-bottom: 1px solid var(--border); padding: 40px 32px; }
-      .team-card:last-child { border-bottom: none; }
+      .referral-inner { grid-template-columns: 1fr; }
+      .referral-left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 40px; }
+      .referral-right { padding: 48px 40px; }
     }
     @media (max-width: 640px) {
-      .team-header { padding: 48px 20px 32px; }
-      .team-card { padding: 36px 20px; }
-      .team-footer { padding: 28px 20px; }
+      .referral-left { padding: 40px 20px; }
+      .referral-right { padding: 40px 20px; }
     }
 
     /* ═══ HOW IT WORKS ═══ */
@@ -825,13 +808,13 @@
     }
     .how-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 0;
       border-left: 1px solid var(--border);
     }
     .how-step {
       border-right: 1px solid var(--border);
-      padding: 36px 28px;
+      padding: 36px 24px;
     }
     .step-num {
       font-family: 'Playfair Display', serif;
@@ -843,16 +826,27 @@
     }
     .step-title {
       font-family: 'Libre Baskerville', serif;
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       font-weight: 400;
       color: var(--text);
       margin-bottom: 12px;
     }
     .step-body {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 300;
       color: var(--muted);
       line-height: 1.8;
+    }
+    .step-optional {
+      display: inline-block;
+      font-size: 9.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--subtle);
+      font-weight: 400;
+      border: 1px solid var(--border);
+      padding: 2px 7px;
+      margin-top: 10px;
     }
 
     /* ═══ FAQ ═══ */
@@ -1189,173 +1183,64 @@
     .footer-bottom a { color: rgba(255,255,255,0.3); text-decoration: none; }
     .footer-bottom a:hover { color: rgba(255,255,255,0.65); }
 
-    /* Prevent iOS auto-zoom on input focus */
-    @media (max-width: 640px) {
-      .f-group input,
-      .f-group select,
-      .f-group textarea,
-      .c-field input,
-      .c-field select,
-      .c-field textarea { font-size: 16px; }
-    }
-
-    /* ═══ RESPONSIVE — tablet ═══ */
+    /* ═══ RESPONSIVE ═══ */
     @media (max-width: 1020px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-
-      /* Hero */
       .hero-inner { grid-template-columns: 1fr; max-width: 680px; }
       .hero-panel { max-width: 540px; }
-
-      /* Intro */
       .intro-inner { grid-template-columns: 1fr; }
       .intro-left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 40px; flex-direction: row; flex-wrap: wrap; gap: 40px; }
       .intro-right { padding: 48px 40px; }
-
-      /* Services */
       .services-header { grid-template-columns: 1fr; gap: 16px; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .service-item:nth-child(4n) { border-right: 1px solid var(--border); }
       .service-item:nth-child(2n) { border-right: none; }
       .service-item:nth-last-child(-n+4) { border-bottom: 1px solid var(--border); }
       .service-item:nth-last-child(-n+2) { border-bottom: none; }
-
-      /* Team */
-      .team-header { grid-template-columns: 1fr; gap: 16px; padding: 48px 40px 40px; }
-      .team-grid { grid-template-columns: 1fr; }
-      .team-card { border-right: none; border-bottom: 1px solid var(--border); flex-direction: row; align-items: flex-start; text-align: left; padding: 36px 40px; gap: 32px; }
-      .team-card:last-child { border-bottom: none; }
-      .team-photo { width: 120px; height: 120px; flex-shrink: 0; margin-bottom: 0; }
-      .team-info { align-items: flex-start; }
-      .team-quals { justify-content: flex-start; }
-      .team-footer { padding: 28px 40px; }
-
-      /* Testimonials */
-      .t-grid { grid-template-columns: 1fr; }
-
-      /* About */
       .about-inner { grid-template-columns: 1fr; }
       .about-image { min-height: 360px; border-right: none; border-bottom: 1px solid var(--border); }
       .about-text { padding: 48px 40px; }
-
-      /* How */
       .how-header { grid-template-columns: 1fr; gap: 16px; }
-      .how-grid { grid-template-columns: repeat(2, 1fr); }
-
-      /* FAQ */
+      .how-grid { grid-template-columns: repeat(3, 1fr); }
       .faq-inner { grid-template-columns: 1fr; }
       .faq-left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 40px; }
       .faq-right { padding: 48px 40px; }
-
-      /* Contact */
       .contact-inner { grid-template-columns: 1fr; }
       .contact-left { border-right: none; border-bottom: 1px solid var(--border); padding: 56px 40px; }
       .contact-right { padding: 56px 40px; }
-
-      /* Articles */
+      .t-grid { grid-template-columns: 1fr; }
       .articles-grid { grid-template-columns: 1fr; }
       .article-item { border-right: none; border-bottom: 1px solid var(--border); }
       .article-item:last-child { border-bottom: none; }
-
-      /* Footer */
       .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
     }
 
-    /* ═══ RESPONSIVE — mobile ═══ */
     @media (max-width: 640px) {
-      /* Topbar */
-      .topbar { font-size: 11px; padding: 8px 16px; letter-spacing: 0.03em; }
-      .topbar span { margin: 0 6px; }
-
-      /* Nav */
-      .nav-inner { padding: 0 20px; height: 60px; }
-      .nav-logo { font-size: 20px; }
-
-      /* Hero */
-      .hero { min-height: auto; }
-      .hero-inner { padding: 80px 20px 52px; gap: 40px; }
-      .hero h1 { font-size: 2.4rem; }
-      .hero-lead { font-size: 15px; margin-bottom: 28px; }
-      .hero-actions { gap: 10px; margin-bottom: 32px; }
-      .btn { padding: 13px 22px; font-size: 11px; }
-      .hero-modes { flex-wrap: wrap; gap: 8px; row-gap: 8px; border-top: none; padding-top: 0; }
-      .hero-mode { border-right: none; padding-right: 0; margin-right: 0; font-size: 10px; background: rgba(255,255,255,0.08); padding: 5px 10px; }
+      .hero-inner { padding: 72px 20px 56px; }
+      .hero h1 { font-size: 2.6rem; }
       .hero-panel { padding: 28px 20px; }
       .f-row { grid-template-columns: 1fr; }
-      .panel-btn { padding: 14px; }
-
-      /* Intro */
-      .intro-left { padding: 36px 20px; gap: 28px; }
-      .intro-right { padding: 36px 20px; }
-      .stat-fig { font-size: 3rem; }
-
-      /* Services */
-      .services-header { padding: 44px 20px 28px; }
+      .intro-left { padding: 40px 20px; }
+      .intro-right { padding: 40px 20px; }
+      .services-header { padding: 48px 20px 32px; }
       .services-grid { grid-template-columns: 1fr; }
-      .service-item { border-right: none !important; border-bottom: 1px solid var(--border) !important; padding: 28px 20px; }
+      .service-item { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
       .service-item:last-child { border-bottom: none !important; }
-      .svc-link { opacity: 1; }
-
-      /* Team */
-      .team-header { padding: 44px 20px 32px; }
-      .team-card { flex-direction: column; align-items: center; text-align: center; padding: 36px 20px; gap: 0; }
-      .team-photo { width: 130px; height: 130px; margin-bottom: 24px; }
-      .team-info { align-items: center; }
-      .team-quals { justify-content: center; }
-      .team-footer { padding: 24px 20px; }
-
-      /* Testimonials */
-      .testimonials-inner { padding: 48px 20px; }
-      .testimonials-header { flex-direction: column; align-items: flex-start; gap: 20px; margin-bottom: 36px; padding-bottom: 24px; }
-      .t-card { padding: 28px 20px; }
-      .t-body { font-size: 0.97rem; }
-
-      /* About */
-      .about-image { min-height: 280px; }
-      .about-text { padding: 36px 20px; }
-      .about-caption-text { font-size: 1.35rem; }
-      .check-list li { font-size: 13.5px; }
-
-      /* How */
-      .how-inner { padding: 48px 20px; }
-      .how-header { margin-bottom: 40px; padding-bottom: 28px; }
-      .how-grid { grid-template-columns: 1fr; border-left: none; }
-      .how-step { border-right: none; border-bottom: 1px solid var(--border); padding: 28px 0; }
-      .how-step:last-child { border-bottom: none; }
-      .step-num { font-size: 2.2rem; margin-bottom: 12px; }
-
-      /* FAQ */
-      .faq-left { padding: 36px 20px; }
-      .faq-right { padding: 36px 20px; }
-      .faq-q h4 { font-size: 0.92rem; }
-      .faq-a { font-size: 13.5px; }
-
-      /* Contact */
-      .contact-left { padding: 44px 20px; }
-      .contact-right { padding: 44px 20px; }
+      .about-text { padding: 40px 20px; }
+      .how-inner { padding: 56px 20px; }
+      .how-grid { grid-template-columns: 1fr; }
+      .faq-left { padding: 40px 20px; }
+      .faq-right { padding: 40px 20px; }
+      .contact-left { padding: 48px 20px; }
+      .contact-right { padding: 48px 20px; }
       .c-row { grid-template-columns: 1fr; }
-      .cd-row { flex-direction: column; gap: 3px; }
-      .cd-val { text-align: left; }
-
-      /* Articles */
-      .articles-header { padding: 44px 20px 24px; flex-direction: column; align-items: flex-start; gap: 14px; }
-      .article-item { padding: 28px 20px; }
-      .art-title { font-size: 1.1rem; }
-      .art-read { opacity: 1; }
-
-      /* Footer */
-      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
-      footer { padding: 44px 20px 24px; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
-    }
-
-    /* ═══ RESPONSIVE — small phones ═══ */
-    @media (max-width: 380px) {
-      .hero h1 { font-size: 2.1rem; }
-      .hero-actions { flex-direction: column; align-items: stretch; }
-      .hero-actions .btn { text-align: center; }
-      .team-photo { width: 110px; height: 110px; }
+      .articles-header { padding: 48px 20px 28px; flex-direction: column; align-items: flex-start; gap: 14px; }
+      .article-item { padding: 32px 20px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      footer { padding: 48px 20px 24px; }
+      .nav-inner { padding: 0 20px; }
+      .testimonials-inner { padding: 56px 20px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1376,7 +1261,6 @@
       <a href="/" class="nav-logo">Krysallis</a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
-        <li><a href="#team">Meet the team</a></li>
         <li><a href="#how">Getting started</a></li>
         <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#articles">Articles</a></li>
@@ -1391,7 +1275,6 @@
   <div class="mobile-menu" id="mobileMenu" role="navigation">
     <button class="mobile-close" id="mobileClose" aria-label="Close menu">&#215;</button>
     <a href="#services" data-close>Services</a>
-    <a href="#team" data-close>Meet the team</a>
     <a href="#how" data-close>Getting started</a>
     <a href="#testimonials" data-close>Reviews</a>
     <a href="#articles" data-close>Articles</a>
@@ -1491,107 +1374,6 @@
         <div class="intro-actions">
           <a href="#contact" class="btn btn-fill">Get in touch</a>
           <a href="#services" class="text-link">View all services</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MEET THE TEAM -->
-  <section class="team" id="team">
-    <div class="team-inner">
-      <div class="team-header">
-        <div>
-          <span class="section-eyebrow">Meet the team</span>
-          <h2 class="display-heading" style="font-size:clamp(1.9rem,2.5vw,2.7rem);">Experienced therapists, <em>here for you.</em></h2>
-        </div>
-        <p class="body-copy" style="max-width:440px;">Every member of our team is professionally qualified, HCPC registered or BACP accredited, and carefully matched to you. Between us we cover a broad range of specialisms, approaches and client groups.</p>
-      </div>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="https://www.krysallis.org.uk/wp-content/uploads/2026/06/Black-White-Design-Update-1-768x944.jpeg" alt="Jo Cheetham — Psychologist and EMDR Therapist" loading="lazy" />
-          </div>
-          <div class="team-info">
-            <div class="team-name">Jo Cheetham</div>
-            <div class="team-role">Psychologist &amp; EMDR Therapist</div>
-            <div class="team-bio">Jo is a HCPC-registered Forensic Psychologist with over 14 years' experience. She supports clients with trauma, anxiety, depression and emotional regulation, drawing on EMDR, CBT, DBT and Compassion Focused Therapy. Jo offers a warm, collaborative approach, helping people process difficult experiences and move towards feeling safer and more connected.</div>
-            <div class="team-quals">
-              <span class="team-qual">HCPC Registered</span>
-              <span class="team-qual">EMDR</span>
-              <span class="team-qual">CBT &amp; DBT</span>
-              <span class="team-qual">Adults &amp; Young People (16+)</span>
-            </div>
-          </div>
-        </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="https://www.krysallis.org.uk/wp-content/uploads/2026/06/Krysallis-Website-photos.svg" alt="Rebecca Bussy — Psychotherapist and Counsellor" loading="lazy" />
-          </div>
-          <div class="team-info">
-            <div class="team-name">Rebecca Bussy</div>
-            <div class="team-role">Psychotherapist &amp; Counsellor</div>
-            <div class="team-bio">Rebecca is an integrative, person-centred therapist with a background as an Advanced Nurse Specialist in the NHS. She specialises in midlife transitions, bereavement, anxiety, menopause and identity — providing a warm, safe space where clients feel truly heard. She is a registered member of the BACP.</div>
-            <div class="team-quals">
-              <span class="team-qual">BACP Registered</span>
-              <span class="team-qual">Person-Centred</span>
-              <span class="team-qual">Integrative</span>
-              <span class="team-qual">Adults</span>
-            </div>
-          </div>
-        </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="https://www.krysallis.org.uk/wp-content/uploads/2025/10/IMG_9966-rotated.jpg" alt="Jane Troughton — Creative Arts Therapist" loading="lazy" />
-          </div>
-          <div class="team-info">
-            <div class="team-name">Jane Troughton</div>
-            <div class="team-role">Creative Arts Therapist</div>
-            <div class="team-bio">Jane is an HCPC-registered creative arts therapist working with adults, young people and children, including adopted children with CPTSD. She is trained in Dyadic Developmental Psychotherapy (DDP) and is an Advanced Music and Imagery Practitioner — offering a uniquely creative and trauma-informed approach to therapy.</div>
-            <div class="team-quals">
-              <span class="team-qual">HCPC Registered</span>
-              <span class="team-qual">DDP Trained</span>
-              <span class="team-qual">Music &amp; Imagery</span>
-              <span class="team-qual">Children &amp; Adults</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="team-footer">
-        <a href="#" class="btn btn-ghost">View the full team</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="how" id="how">
-    <div class="how-inner">
-      <div class="how-header">
-        <div>
-          <span class="section-eyebrow">Getting started</span>
-          <h2 class="display-heading" style="font-size:clamp(1.9rem,2.4vw,2.7rem);">What happens when <em>you contact us.</em></h2>
-        </div>
-        <p class="body-copy" style="max-width:420px;">We've made starting therapy as straightforward as possible. There's no pressure, no commitment after the first call, and no waiting around.</p>
-      </div>
-      <div class="how-grid">
-        <div class="how-step">
-          <div class="step-num">01</div>
-          <div class="step-title">Get in touch</div>
-          <div class="step-body">Call, email or fill in the form. We respond within one working day. A free brief phone consultation is available before you commit to anything.</div>
-        </div>
-        <div class="how-step">
-          <div class="step-num">02</div>
-          <div class="step-title">We match you</div>
-          <div class="step-body">We take time to understand what you need and match you with the right therapist. The therapeutic relationship is at the heart of everything we do.</div>
-        </div>
-        <div class="how-step">
-          <div class="step-num">03</div>
-          <div class="step-title">First session</div>
-          <div class="step-body">An assessment session to get to know each other and agree a way forward. Sessions are 50 minutes; group family sessions up to 75 minutes.</div>
-        </div>
-        <div class="how-step">
-          <div class="step-num">04</div>
-          <div class="step-title">Ongoing support</div>
-          <div class="step-body">Weekly sessions, reviewed together at six weeks. No fixed end date — therapy continues for as long as you and your therapist agree it is helpful.</div>
         </div>
       </div>
     </div>
@@ -1712,12 +1494,123 @@
         <p class="body-copy">Choosing therapy can feel daunting. We take time to understand your situation and make sure you're paired with a therapist whose approach, experience and personality are the right fit.</p>
         <ul class="check-list">
           <li>A free brief phone consultation before your first session</li>
-          <li>Careful matching to a therapist suited to your needs</li>
+          <li>An Initial Assessment to understand your needs and establish the right support</li>
+          <li>Careful matching to a therapist suited to your experience and approach</li>
           <li>Daytime, evening and Saturday appointments</li>
           <li>Face to face, online and telephone sessions available</li>
           <li>No fixed number of sessions — you decide how long is right</li>
         </ul>
         <a href="#contact" class="btn btn-fill">Book a consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERRAL & ASSESSMENT -->
+  <section class="referral">
+    <div class="referral-inner">
+      <div class="referral-left">
+        <span class="section-eyebrow">Referral &amp; Assessment</span>
+        <h2 class="display-heading">Not sure <em>where to start?</em></h2>
+        <p class="body-copy">You don't need to know what kind of therapy you need before you contact us. That's exactly what our Referral &amp; Assessment Team is here for.</p>
+        <p class="body-copy" style="margin-top:14px;">We help people understand whether counselling, psychotherapy, psychology, EMDR, CBT or another approach is most appropriate — and then identify a therapist whose experience, style and availability are the right fit.</p>
+        <div class="referral-cta">
+          <a href="#contact" class="btn btn-fill">Talk to our team</a>
+        </div>
+      </div>
+      <div class="referral-right">
+        <div class="referral-steps">
+          <div class="referral-step">
+            <div class="referral-step-marker">
+              <div class="referral-step-dot"></div>
+              <div class="referral-step-line"></div>
+            </div>
+            <div class="referral-step-content">
+              <div class="referral-step-title">Get in touch</div>
+              <div class="referral-step-note">Call, email or fill in the form. We respond within one working day.</div>
+            </div>
+          </div>
+          <div class="referral-step">
+            <div class="referral-step-marker">
+              <div class="referral-step-dot"></div>
+              <div class="referral-step-line"></div>
+            </div>
+            <div class="referral-step-content">
+              <div class="referral-step-title">Free consultation call</div>
+              <div class="referral-step-note">A brief phone call to talk through your situation before any commitment.</div>
+              <span class="referral-step-tag">Where helpful</span>
+            </div>
+          </div>
+          <div class="referral-step">
+            <div class="referral-step-marker">
+              <div class="referral-step-dot"></div>
+              <div class="referral-step-line"></div>
+            </div>
+            <div class="referral-step-content">
+              <div class="referral-step-title">Initial Assessment</div>
+              <div class="referral-step-note">A dedicated session to understand your needs, history and goals — and to establish the most appropriate support for you. This is what sets Krysallis apart from simply picking a name from a list.</div>
+            </div>
+          </div>
+          <div class="referral-step">
+            <div class="referral-step-marker">
+              <div class="referral-step-dot"></div>
+              <div class="referral-step-line"></div>
+            </div>
+            <div class="referral-step-content">
+              <div class="referral-step-title">Personalised recommendation</div>
+              <div class="referral-step-note">We recommend the right type of therapy and match you with a therapist whose experience, approach and availability suit your situation.</div>
+            </div>
+          </div>
+          <div class="referral-step">
+            <div class="referral-step-marker">
+              <div class="referral-step-dot"></div>
+            </div>
+            <div class="referral-step-content">
+              <div class="referral-step-title">Begin therapy</div>
+              <div class="referral-step-note">Start sessions with the right therapist for you, with ongoing support from our team throughout.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="how-inner">
+      <div class="how-header">
+        <div>
+          <span class="section-eyebrow">Getting started</span>
+          <h2 class="display-heading" style="font-size:clamp(1.9rem,2.4vw,2.7rem);">What happens when <em>you contact us.</em></h2>
+        </div>
+        <p class="body-copy" style="max-width:420px;">We've made starting therapy as straightforward as possible. There's no pressure, no commitment after the first call — and our Referral &amp; Assessment Team will guide you through every step.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="step-num">01</div>
+          <div class="step-title">Get in touch</div>
+          <div class="step-body">Call, email or fill in the form. Our Referral &amp; Assessment Team responds within one working day to understand a little about what you're looking for.</div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">02</div>
+          <div class="step-title">Free consultation</div>
+          <div class="step-body">Where helpful, we'll arrange a brief phone consultation to talk through your situation before committing to anything.</div>
+          <span class="step-optional">If needed</span>
+        </div>
+        <div class="how-step">
+          <div class="step-num">03</div>
+          <div class="step-title">Initial Assessment</div>
+          <div class="step-body">A dedicated assessment session with one of our team to understand your needs, history and goals — and to work out the right type of support for you.</div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">04</div>
+          <div class="step-title">Personalised recommendation</div>
+          <div class="step-body">Based on your assessment, we recommend the most appropriate therapy and match you with a therapist whose experience, approach and availability fit your needs.</div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">05</div>
+          <div class="step-title">Begin therapy</div>
+          <div class="step-body">Regular weekly sessions, reviewed together at six weeks. No fixed end date — therapy continues for as long as you and your therapist agree it is helpful.</div>
+        </div>
       </div>
     </div>
   </section>
