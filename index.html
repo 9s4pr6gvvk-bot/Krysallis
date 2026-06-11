@@ -793,106 +793,143 @@
       justify-content: center;
     }
 
-    /* ═══ REFERRAL STRIP ═══ */
-    .referral {
-      background: var(--purple-light);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+    /* ═══ ASSESSMENT SECTION ═══ */
+    .assessment {
+      background: var(--purple);
+      position: relative;
+      overflow: hidden;
     }
-    .referral-inner {
+    .assessment-deco {
+      position: absolute;
+      top: -60px;
+      right: -20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 32rem;
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(255,255,255,0.03);
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -0.05em;
+    }
+    .assessment-inner {
       max-width: var(--max);
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .assessment-top {
+      padding: 72px 40px 56px;
       display: grid;
-      grid-template-columns: 360px 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: end;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-    .referral-left {
-      padding: 64px 48px 64px 40px;
-      border-right: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .referral-left .section-eyebrow { margin-bottom: 16px; }
-    .referral-left .display-heading { font-size: clamp(1.7rem, 2.2vw, 2.3rem); margin-bottom: 18px; }
-    .referral-left .display-heading em { color: var(--purple-mid); }
-    .referral-left .body-copy { font-size: 14.5px; }
-    .referral-right {
-      padding: 64px 40px 64px 64px;
-    }
-    .referral-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .referral-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border-lt);
-    }
-    .referral-step:first-child { border-top: 1px solid var(--border-lt); }
-    .referral-step-marker {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-shrink: 0;
-      padding-top: 2px;
-    }
-    .referral-step-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--purple);
-      flex-shrink: 0;
-    }
-    .referral-step-line {
-      width: 1px;
-      flex: 1;
-      background: var(--border);
-      margin-top: 5px;
-      min-height: 24px;
-    }
-    .referral-step:last-child .referral-step-line { display: none; }
-    .referral-step-content {
-      flex: 1;
-      padding-bottom: 4px;
-    }
-    .referral-step-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.95rem;
+    .assessment-top .section-eyebrow { color: rgba(255,255,255,0.3); margin-bottom: 18px; }
+    .assessment-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3vw, 3.2rem);
       font-weight: 400;
-      color: var(--text);
-      margin-bottom: 4px;
+      line-height: 1.12;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+    .assessment-heading em {
+      font-style: italic;
+      color: rgba(200,190,230,0.85);
+    }
+    .assessment-intro {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.85;
+      max-width: 420px;
+      margin-bottom: 28px;
+    }
+    .assessment-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+    .assessment-card {
+      background: var(--purple);
+      padding: 40px 32px 44px;
+      display: flex;
+      flex-direction: column;
+      transition: background 0.25s;
+    }
+    .assessment-card:hover { background: var(--purple-mid); }
+    .ac-icon {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      flex-shrink: 0;
+      transition: border-color 0.25s;
+    }
+    .assessment-card:hover .ac-icon { border-color: rgba(200,190,230,0.4); }
+    .ac-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: rgba(200,190,230,0.7);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .ac-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 12px;
       line-height: 1.3;
     }
-    .referral-step-note {
+    .ac-body {
       font-size: 13px;
       font-weight: 300;
-      color: var(--muted);
-      line-height: 1.7;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.85;
+      flex: 1;
     }
-    .referral-step-tag {
-      font-size: 9.5px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--purple-mid);
-      font-weight: 500;
-      background: rgba(82,72,112,0.1);
-      padding: 2px 7px;
-      display: inline-block;
-      margin-top: 5px;
+    .assessment-bottom {
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      gap: 24px;
+      flex-wrap: wrap;
     }
-    .referral-cta { margin-top: 32px; }
+    .assessment-bottom-note {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.28);
+      letter-spacing: 0.02em;
+    }
+    .btn-outline-light {
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.2);
+      white-space: nowrap;
+    }
+    .btn-outline-light:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
 
     @media (max-width: 1020px) {
-      .referral-inner { grid-template-columns: 1fr; }
-      .referral-left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 40px; }
-      .referral-right { padding: 48px 40px; }
+      .assessment-top { grid-template-columns: 1fr; gap: 24px; padding: 56px 40px 40px; }
+      .assessment-cards { grid-template-columns: repeat(2, 1fr); }
+      .assessment-bottom { padding: 28px 40px; }
     }
     @media (max-width: 640px) {
-      .referral-left { padding: 40px 20px; }
-      .referral-right { padding: 40px 20px; }
+      .assessment-top { padding: 48px 20px 32px; }
+      .assessment-cards { grid-template-columns: 1fr; }
+      .assessment-card { padding: 32px 20px; }
+      .assessment-bottom { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
     }
 
     /* ═══ HOW IT WORKS ═══ */
@@ -1736,71 +1773,53 @@
     </div>
   </section>
 
-  <!-- REFERRAL & ASSESSMENT -->
-  <section class="referral">
-    <div class="referral-inner">
-      <div class="referral-left">
-        <span class="section-eyebrow">Referral &amp; Assessment</span>
-        <h2 class="display-heading">Not sure <em>where to start?</em></h2>
-        <p class="body-copy">You don't need to know what kind of therapy you need before you contact us. That's exactly what our Referral &amp; Assessment Team is here for.</p>
-        <p class="body-copy" style="margin-top:14px;">We help people understand whether counselling, psychotherapy, psychology, EMDR, CBT or another approach is most appropriate — and then identify a therapist whose experience, style and availability are the right fit.</p>
-        <div class="referral-cta">
-          <a href="#contact" class="btn btn-fill">Talk to our team</a>
+  <!-- NOT SURE WHERE TO START -->
+  <section class="assessment">
+    <div class="assessment-deco" aria-hidden="true">?</div>
+    <div class="assessment-inner">
+      <div class="assessment-top">
+        <div>
+          <span class="section-eyebrow">Referral &amp; Assessment</span>
+          <h2 class="assessment-heading">Not sure where<br /><em>to start?</em></h2>
+        </div>
+        <div>
+          <p class="assessment-intro">Most people who contact us don't know what type of therapy they need. That's not a problem — it's exactly what our Referral &amp; Assessment Team is here to work out with you.</p>
+          <a href="#contact" class="btn btn-outline-light">Talk to our team</a>
         </div>
       </div>
-      <div class="referral-right">
-        <div class="referral-steps">
-          <div class="referral-step">
-            <div class="referral-step-marker">
-              <div class="referral-step-dot"></div>
-              <div class="referral-step-line"></div>
-            </div>
-            <div class="referral-step-content">
-              <div class="referral-step-title">Get in touch</div>
-              <div class="referral-step-note">Call, email or fill in the form. We respond within one working day.</div>
-            </div>
+      <div class="assessment-cards">
+        <div class="assessment-card">
+          <div class="ac-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 3.5-2.5 6-4 7.5V18H9v-1.5C7.5 15 5 12.5 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="22" x2="15" y2="22"/><line x1="9" y1="19" x2="15" y2="19"/></svg>
           </div>
-          <div class="referral-step">
-            <div class="referral-step-marker">
-              <div class="referral-step-dot"></div>
-              <div class="referral-step-line"></div>
-            </div>
-            <div class="referral-step-content">
-              <div class="referral-step-title">Free consultation call</div>
-              <div class="referral-step-note">A brief phone call to talk through your situation before any commitment.</div>
-              <span class="referral-step-tag">Where helpful</span>
-            </div>
-          </div>
-          <div class="referral-step">
-            <div class="referral-step-marker">
-              <div class="referral-step-dot"></div>
-              <div class="referral-step-line"></div>
-            </div>
-            <div class="referral-step-content">
-              <div class="referral-step-title">Initial Assessment</div>
-              <div class="referral-step-note">A dedicated session to understand your needs, history and goals — and to establish the most appropriate support for you. This is what sets Krysallis apart from simply picking a name from a list.</div>
-            </div>
-          </div>
-          <div class="referral-step">
-            <div class="referral-step-marker">
-              <div class="referral-step-dot"></div>
-              <div class="referral-step-line"></div>
-            </div>
-            <div class="referral-step-content">
-              <div class="referral-step-title">Personalised recommendation</div>
-              <div class="referral-step-note">We recommend the right type of therapy and match you with a therapist whose experience, approach and availability suit your situation.</div>
-            </div>
-          </div>
-          <div class="referral-step">
-            <div class="referral-step-marker">
-              <div class="referral-step-dot"></div>
-            </div>
-            <div class="referral-step-content">
-              <div class="referral-step-title">Begin therapy</div>
-              <div class="referral-step-note">Start sessions with the right therapist for you, with ongoing support from our team throughout.</div>
-            </div>
-          </div>
+          <div class="ac-title">We work out what you need</div>
+          <div class="ac-body">Counselling, psychotherapy, psychology, EMDR, CBT, family therapy — there are meaningful differences. Our assessment helps identify which approach is right for your specific situation, history and goals.</div>
         </div>
+        <div class="assessment-card">
+          <div class="ac-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 20c0-3-2-5.5-5-6.5"/></svg>
+          </div>
+          <div class="ac-title">Matched, not chosen</div>
+          <div class="ac-body">Most therapy directories hand you a list and leave you to guess. We do the opposite — we match you to a therapist whose experience, therapeutic approach and availability genuinely suit your needs.</div>
+        </div>
+        <div class="assessment-card">
+          <div class="ac-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="ac-title">A dedicated assessment session</div>
+          <div class="ac-body">Before therapy begins, you'll have a proper Initial Assessment with one of our team. Not a sales call — a real clinical conversation that gives us what we need to point you in the right direction.</div>
+        </div>
+        <div class="assessment-card">
+          <div class="ac-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="ac-title">Better outcomes from the start</div>
+          <div class="ac-body">The therapeutic relationship is the single biggest predictor of whether therapy works. Taking time to get the match right isn't an extra step — it's the most important thing we do.</div>
+        </div>
+      </div>
+      <div class="assessment-bottom">
+        <span class="assessment-bottom-note">Established 2007 &ensp;·&ensp; HCPC registered &amp; BACP accredited practitioners &ensp;·&ensp; Harrogate, North Yorkshire</span>
+        <a href="#contact" class="btn btn-outline-light">Get in touch</a>
       </div>
     </div>
   </section>
